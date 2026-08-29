@@ -64,16 +64,16 @@ export const Header: React.FC<HeaderProps> = ({
             <div className="flex items-center gap-3">
               <img
                 src="/logo.png"
-                alt="סורק המזון ללא גלוטן של פיתי 🌾🚫"
+                alt='אפליקציית הלל"ג של פיתי 🌾🚫'
                   className="w-12 h-12 rounded-2xl object-cover shadow-md ring-2 ring-emerald-800/10 shrink-0 border border-stone-200"
               />
               <div>
                 <div className="flex items-center gap-2 flex-wrap">
                   <h1 className="text-lg sm:text-xl font-extrabold text-stone-900 tracking-tight">
-                    סורק רמזור מזון לסיבו (ללא גלוטן) לגורגורילה
+                    אפליקציית הלל"ג של פיתי 🌾🚫
                   </h1>
                 </div>
-                <p className="text-xs text-stone-500 font-medium">סורק מזון רפואי, תפריטים מותאמים ומדריך תזונה קליני לפיתי</p>
+                <p className="text-xs text-stone-500 font-medium">סורק מזון לצליאק, 500+ מוצרים ללא גלוטן ומתכוני שף לפיתי</p>
               </div>
             </div>
 

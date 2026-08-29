@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: sibo-safe
+    name: piti-gluten-free
     env: node
     plan: free
     buildCommand: npm install && npm run build

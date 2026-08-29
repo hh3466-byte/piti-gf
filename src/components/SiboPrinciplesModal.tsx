@@ -18,7 +18,7 @@ export const SiboPrinciplesModal: React.FC<SiboPrinciplesModalProps> = ({ isOpen
               <Heart className="w-5 h-5" />
             </div>
             <div>
-              <h3 className="text-xl font-bold text-stone-900">מדריך עקרונות SIBO עבור ניר</h3>
+              <h3 className="text-xl font-bold text-stone-900">מדריך עקרונות SIBO עבור פיתי</h3>
               <p className="text-xs text-stone-500">למה התזונה הקפדנית כה חשובה וכיצד היא מרפאה את המעי</p>
             </div>
           </div>

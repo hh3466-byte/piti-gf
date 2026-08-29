@@ -75,7 +75,7 @@ export const TrafficLightResult: React.FC<TrafficLightResultProps> = ({
     }
   > = {
     GREEN: {
-      title: 'אור ירוק — מותר ובטוח לניר! 🟢',
+      title: 'אור ירוק — מותר ובטוח לפיתי! 🟢',
       subtitle: 'מאכל דל תסיסה, 0 או כמעט 0 FODMAPs. בטוח לחלוטין.',
       color: 'text-emerald-700',
       bgBadge: 'bg-emerald-100 text-emerald-800 border-emerald-300',
@@ -95,7 +95,7 @@ export const TrafficLightResult: React.FC<TrafficLightResultProps> = ({
       icon: AlertTriangle,
     },
     RED: {
-      title: isUnidentified ? 'מוצר לא מזוהה 🔍' : 'אור אדום — אסור בתכלית לניר! 🔴',
+      title: isUnidentified ? 'מוצר לא מזוהה 🔍' : 'אור אדום — אסור בתכלית לפיתי! 🔴',
       subtitle: isUnidentified
         ? 'בדיקה משלימה לשמירה על בטיחות ניר (סריקה חוזרת או הקלדה)'
         : 'מאכל עתיר תסיסה (FODMAP גבוה / עמילן מרוכז). מזין את חיידקי ה-SIBO!',
@@ -407,7 +407,7 @@ export const TrafficLightResult: React.FC<TrafficLightResultProps> = ({
             <div className="pt-5 space-y-3">
               <h4 className="text-sm sm:text-base font-black text-emerald-900 uppercase tracking-wider flex items-center gap-2">
                 <ChefHat className="w-4 h-4 text-emerald-600" />
-                <span>חלופות טעימות ומותרות שמתאימות לניר:</span>
+                <span>חלופות טעימות ומותרות שמתאימות לפיתי:</span>
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-2.5">
                 {(result.safeSubstitutions || []).map((sub, idx) => (
@@ -450,7 +450,7 @@ export const TrafficLightResult: React.FC<TrafficLightResultProps> = ({
                 </div>
 
                 <p className="text-xs sm:text-sm text-emerald-200">
-                  הנה מתכונים ביתיים מוכנים לניר בהמלצת שֵׁף דַּלָּה פּוּפוּ עם המרכיבים המדויקים, ללא בצל, ללא שום ו-0% תסיסה:
+                  הנה מתכונים ביתיים מוכנים לפיתי בהמלצת שֵׁף דַּלָּה פּוּפוּ עם המרכיבים המדויקים, ללא בצל, ללא שום ו-0% תסיסה:
                 </p>
 
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2.5 pt-1">

@@ -111,7 +111,7 @@ export const MedicalGuideView: React.FC = () => {
               <div className="text-xs text-emerald-900 bg-emerald-50/70 border border-emerald-200/80 p-3 rounded-xl flex items-start gap-2">
                 <Shield className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-bold">השפעה טיפולית עבור ניר: </span>
+                  <span className="font-bold">השפעה טיפולית עבור פיתי: </span>
                   <span>{article.clinicalImpactHe}</span>
                 </div>
               </div>
@@ -125,7 +125,7 @@ export const MedicalGuideView: React.FC = () => {
         <div className="space-y-6">
           <div className="bg-white rounded-3xl p-6 sm:p-8 border border-stone-200 shadow-xs space-y-6">
             <h3 className="text-xl font-bold text-stone-900 border-b pb-3">
-              מדריך מהיר: מה מותר ומה אסור לניר על פי הרפואה
+              מדריך מהיר: מה מותר ומה אסור לפיתי על פי הרפואה
             </h3>
 
             {/* Side-by-Side Allowed vs Forbidden */}
@@ -237,7 +237,7 @@ export const MedicalGuideView: React.FC = () => {
               <p className="text-xs sm:text-sm text-stone-700 leading-relaxed">
                 מולקולות הפרוקטן (הסוכר המתסיס שבשום) הן <strong>הידרופיליות (מסיסות במים בלבד)</strong>. הן אינן מסיסות בשמן.
                 לכן, כאשר משרים שיני שום בשמן זית ומסננים את החלקיקים המוצקים, מקבלים את הארומה והטעם הנהדרים של השום
-                מבלי שאף מולקולת פרוקטן תעבור לשמן! זהו פתרון קסם שמשנה את חוויית האוכל עבור ניר.
+                מבלי שאף מולקולת פרוקטן תעבור לשמן! זהו פתרון קסם שמשנה את חוויית האוכל עבור פיתי.
               </p>
             </div>
 

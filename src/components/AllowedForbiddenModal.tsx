@@ -50,7 +50,7 @@ export const AllowedForbiddenModal: React.FC<AllowedForbiddenModalProps> = ({
     {
       cat: 'proteins',
       item: 'ביצים (קשות, עין, חביתה)',
-      note: 'מעולות לניר, קלות לעיכול, 0 גרם FODMAP.',
+      note: 'מעולות לפיתי, קלות לעיכול, 0 גרם FODMAP.',
     },
     {
       cat: 'proteins',
@@ -206,7 +206,7 @@ export const AllowedForbiddenModal: React.FC<AllowedForbiddenModalProps> = ({
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-1.5">
               <ShieldCheck className="w-3.5 h-3.5" />
-              <span>מדריך מהיר ומרוכז לגורגורילה</span>
+              <span>מדריך מהיר ומרוכז לפיתי</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
               מה מותר ומה אסור ב-SIBO 🚦

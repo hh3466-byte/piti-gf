@@ -172,7 +172,7 @@ export const FoodDatabaseView: React.FC<FoodDatabaseViewProps> = ({
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h2 className="text-2xl font-bold text-stone-900 tracking-tight">
-            מאגר המאכלים ל-SIBO עבור ניר 🥦
+            מאגר המאכלים ל-SIBO עבור פיתי 🥦
           </h2>
           <p className="text-sm text-stone-500">
             מדריך מהיר מבוסס מחקרי ד״ר סיבקר, ד״ר ג׳קובי ואוניברסיטת מונאש
@@ -373,7 +373,7 @@ export const FoodDatabaseView: React.FC<FoodDatabaseViewProps> = ({
                 }`}
               >
                 {dynamicClinicalResult.status === 'GREEN'
-                  ? '🟢 אור ירוק — מותר לניר'
+                  ? '🟢 אור ירוק — מותר לפיתי'
                   : dynamicClinicalResult.status === 'YELLOW'
                   ? '🟡 אור צהוב — מוגבל'
                   : '🔴 אור אדום — אסור בסיבו'}
@@ -555,7 +555,7 @@ export const FoodDatabaseView: React.FC<FoodDatabaseViewProps> = ({
               {selectedItem.alternativesHe && selectedItem.alternativesHe.length > 0 && (
                 <div className="space-y-2">
                   <span className="text-xs font-bold text-stone-500 uppercase tracking-wider block">
-                    חלופות בטוחות שמתאימות לניר:
+                    חלופות בטוחות שמתאימות לפיתי:
                   </span>
                   <div className="space-y-1.5">
                     {selectedItem.alternativesHe.map((alt, idx) => (

@@ -892,7 +892,7 @@ export const ISRAELI_SUPERMARKET_CATALOG: Record<string, Partial<BarcodeProductI
     productName: 'בירה מכבי 7.9% פחית 500 מ"ל (Maccabee 7.9% Strong Lager)',
     brand: 'מכבי 7.9% Maccabee / טמפו',
     ingredientsText: 'מים, לתת שעורה, כשות, שמרי בירה מובחרים (אלכוהול 7.9%)',
-    allergens: 'עשיר בלתת שעורה, פחמימות מותססות ושמרים (אור אדום לניר 🛑)',
+    allergens: 'עשיר בלתת שעורה, פחמימות מותססות ושמרים (אור אדום לפיתי 🛑)',
     categories: 'בירה ומשקאות אלכוהוליים',
   },
   '7290000185234': {
@@ -1169,14 +1169,14 @@ export const ISRAELI_SUPERMARKET_CATALOG: Record<string, Partial<BarcodeProductI
     productName: 'משקה שקדים ללא סוכר אלפרו 1 ליטר (Alpro Almond No Sugars)',
     brand: 'אלפרו Alpro',
     ingredientsText: 'מים, שקדים (2.3%), טרי-קלציום פוספט, מלח ים, מייצבים (לוקוסט בין גאם, גלאן גאם), לציטין חמניות, ויטמינים (B2, B12, E, D2)',
-    allergens: 'מכיל שקדים (0% סוכר, דל FODMAP לחלוטין - מותר לניר!)',
+    allergens: 'מכיל שקדים (0% סוכר, דל FODMAP לחלוטין - מותר לפיתי!)',
     categories: 'תחליפי חלב ומשקאות צמחיים',
   },
   '5411188126744': {
     productName: 'משקה שקדים ללא סוכר אלפרו 1 ליטר (Alpro Almond No Sugars)',
     brand: 'אלפרו Alpro',
     ingredientsText: 'מים, שקדים (2.3%), סידן, מלח ים, מייצבים, ויטמינים',
-    allergens: 'מכיל שקדים (0% סוכר - מותר לניר!)',
+    allergens: 'מכיל שקדים (0% סוכר - מותר לפיתי!)',
     categories: 'תחליפי חלב ומשקאות צמחיים',
   },
   '5411188115502': {
@@ -1214,13 +1214,13 @@ export const ISRAELI_SUPERMARKET_CATALOG: Record<string, Partial<BarcodeProductI
   '7640149010011': {
     productName: 'קפסולות נספרסו ריסטרטו (Nespresso Ispirazione Ristretto)',
     brand: 'נספרסו Nespresso',
-    ingredientsText: '100% קפה קלוי וטחון בקפסולות אלומיניום (0 FODMAP - מותר לניר!)',
+    ingredientsText: '100% קפה קלוי וטחון בקפסולות אלומיניום (0 FODMAP - מותר לפיתי!)',
     categories: 'קפסולות קפה',
   },
   '7640149010028': {
     productName: 'קפסולות נספרסו ארפג׳יו (Nespresso Ispirazione Firenze Arpeggio)',
     brand: 'נספרסו Nespresso',
-    ingredientsText: '100% פולי קפה קלויים וטחונים (0 FODMAP - מותר לניר!)',
+    ingredientsText: '100% פולי קפה קלויים וטחונים (0 FODMAP - מותר לפיתי!)',
     categories: 'קפסולות קפה',
   },
   '7640149010066': {
@@ -1273,13 +1273,13 @@ export const ISRAELI_SUPERMARKET_CATALOG: Record<string, Partial<BarcodeProductI
   '7290003040017': {
     productName: 'פריכיות אורז דקות טבעיות 100% B&D (בי אנד די)',
     brand: 'B&D / בי אנד די',
-    ingredientsText: '100% אורז מלא, מלח ים (0 שומן, 0 סוכר, ללא גלוטן - מותר לניר!)',
+    ingredientsText: '100% אורז מלא, מלח ים (0 שומן, 0 סוכר, ללא גלוטן - מותר לפיתי!)',
     categories: 'פריכיות וקרקרים',
   },
   '7290000071014': {
     productName: 'אורז בסמטי הודי קלאסי סוגת 1 ק״ג (Sugat Basmati Rice)',
     brand: 'סוגת Sugat',
-    ingredientsText: '100% אורז בסמטי הודי מובחר (דל FODMAP - מותר לניר בכמות מדודה!)',
+    ingredientsText: '100% אורז בסמטי הודי מובחר (דל FODMAP - מותר לפיתי בכמות מדודה!)',
     categories: 'אורז ודגנים',
   },
   '7290000071021': {
@@ -1316,13 +1316,13 @@ export const ISRAELI_SUPERMARKET_CATALOG: Record<string, Partial<BarcodeProductI
   '8004030010011': {
     productName: 'טונה ריו מרה בשמן זית 80 גרם (Rio Mare Tuna in Olive Oil)',
     brand: 'ריו מרה Rio Mare / איטליה',
-    ingredientsText: 'טונה בהירה (Skipjack), שמן זית כתית, מלח (0 פחמימות, 0 FODMAPs - מותר ובטוח לניר!)',
+    ingredientsText: 'טונה בהירה (Skipjack), שמן זית כתית, מלח (0 פחמימות, 0 FODMAPs - מותר ובטוח לפיתי!)',
     categories: 'שימורי דגים וטונה',
   },
   '8004030010042': {
     productName: 'טונה ריו מרה טבעי במים ומלח (Rio Mare in Water)',
     brand: 'ריו מרה Rio Mare',
-    ingredientsText: 'טונה בהירה, מים, מלח (0 FODMAP - בטוח לניר!)',
+    ingredientsText: 'טונה בהירה, מים, מלח (0 FODMAP - בטוח לפיתי!)',
     categories: 'שימורי דגים וטונה',
   },
   '7290000130012': {
@@ -1334,7 +1334,7 @@ export const ISRAELI_SUPERMARKET_CATALOG: Record<string, Partial<BarcodeProductI
   '7290000063101': {
     productName: 'שמן זית כתית מעולה יד מרדכי 750 מ״ל (חמיצות עד 0.5%)',
     brand: 'יד מרדכי Yad Mordechai',
-    ingredientsText: '100% שמן זית כתית מעולה בכבישה קרה (0 FODMAP - מומלץ ובטוח לניר!)',
+    ingredientsText: '100% שמן זית כתית מעולה בכבישה קרה (0 FODMAP - מומלץ ובטוח לפיתי!)',
     categories: 'שמן זית ושמנים',
   },
   '7290008001013': {
@@ -1356,13 +1356,13 @@ export const ISRAELI_SUPERMARKET_CATALOG: Record<string, Partial<BarcodeProductI
   '7610400010014': {
     productName: 'שוקולד מריר 85% לינדט אקסלנס (Lindt Excellence 85% Cocoa)',
     brand: 'לינדט Lindt / שוויץ',
-    ingredientsText: 'עיסת קקאו, חמאת קקאו, קקאו דל שומן, סוכר דמררה חום, וניל (דל סוכר - מותר 1-2 קוביות לניר!)',
+    ingredientsText: 'עיסת קקאו, חמאת קקאו, קקאו דל שומן, סוכר דמררה חום, וניל (דל סוכר - מותר 1-2 קוביות לפיתי!)',
     categories: 'שוקולד מריר פרימיום',
   },
   '7610400010021': {
     productName: 'שוקולד מריר 90% לינדט אקסלנס (Lindt Excellence 90% Cocoa)',
     brand: 'לינדט Lindt',
-    ingredientsText: 'עיסת קקאו, חמאת קקאו, קקאו דל שומן, סוכר, וניל (כמעט 0 סוכר - בטוח לניר!)',
+    ingredientsText: 'עיסת קקאו, חמאת קקאו, קקאו דל שומן, סוכר, וניל (כמעט 0 סוכר - בטוח לפיתי!)',
     categories: 'שוקולד מריר פרימיום',
   },
   '7290000020012': {
@@ -1403,7 +1403,7 @@ export const ISRAELI_SUPERMARKET_CATALOG: Record<string, Partial<BarcodeProductI
   '7290000494009': {
     productName: 'מיץ תפוזים 100% סחוט טרי פרי מור 500 מ"ל (Pri Mor)',
     brand: 'פרי מור (Pri Mor)',
-    ingredientsText: '100% מיץ תפוזים סחוט טרי (אור צהוב - מומלץ לשתות עד חצי בקבוק לניר)',
+    ingredientsText: '100% מיץ תפוזים סחוט טרי (אור צהוב - מומלץ לשתות עד חצי בקבוק לפיתי)',
     categories: 'מיצי פירות סחוטים',
   },
   '7290000494016': {
@@ -1427,7 +1427,7 @@ export const ISRAELI_SUPERMARKET_CATALOG: Record<string, Partial<BarcodeProductI
   '7290013092018': {
     productName: 'מיץ תפוזים 100% סחוט טבעי פרי ניב 2 ליטר (Pri Niv Orange Juice)',
     brand: 'פרי ניב (Pri Niv)',
-    ingredientsText: '100% מיץ תפוזים סחוט טבעי (ללא תוספת סוכר, ללא חומרים משמרים - אור צהוב, מוגבל לעד 100 מ"ל לניר)',
+    ingredientsText: '100% מיץ תפוזים סחוט טבעי (ללא תוספת סוכר, ללא חומרים משמרים - אור צהוב, מוגבל לעד 100 מ"ל לפיתי)',
     categories: 'מיצי פירות סחוטים',
   },
   '7290013092025': {
@@ -1479,7 +1479,7 @@ export const ISRAELI_SUPERMARKET_CATALOG: Record<string, Partial<BarcodeProductI
   '7290000062024': {
     productName: 'אבקת קקאו עלית 150 גרם לאפייה ולשתייה (Elite Pure Cocoa Powder)',
     brand: 'עלית / שטראוס Elite',
-    ingredientsText: '100% אבקת קקאו טהור (ללא סוכר, ללא לקטוז, דל FODMAP - אור ירוק מותר ובטוח לניר! 🟢)',
+    ingredientsText: '100% אבקת קקאו טהור (ללא סוכר, ללא לקטוז, דל FODMAP - אור ירוק מותר ובטוח לפיתי! 🟢)',
     categories: 'אפייה וקקאו',
   },
   '7290000062017': {
@@ -1531,7 +1531,7 @@ export const ISRAELI_SUPERMARKET_CATALOG: Record<string, Partial<BarcodeProductI
   '7290000096234': {
     productName: 'קצפת צמחית להקצפה ריץ׳ 500 מ"ל (Rich\'s Whip Topping Parve)',
     brand: 'ריץ׳ (Rich\'s)',
-    ingredientsText: 'מים, שומן צמחי מוקשה (דקלים), סוכר, סירופ גלוקוז, מתחלבים (E471, E435), מייצבים (צלולוז), מלח, חומרי טעם וריח (פרווה, 0% לקטוז, ללא גלוטן - אור ירוק מותר לניר! 🟢)',
+    ingredientsText: 'מים, שומן צמחי מוקשה (דקלים), סוכר, סירופ גלוקוז, מתחלבים (E471, E435), מייצבים (צלולוז), מלח, חומרי טעם וריח (פרווה, 0% לקטוז, ללא גלוטן - אור ירוק מותר לפיתי! 🟢)',
     categories: 'קצפות ותחליפי חלב',
   },
   '7290000096210': {

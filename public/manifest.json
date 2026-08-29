@@ -1,7 +1,7 @@
 {
-  "short_name": "SIBO Safe",
-  "name": "SIBO Safe for Nir - סורק מזון לסיבו",
-  "description": "סורק מזון רפואי ומדריך תזונה קליני ל-SIBO עבור ניר",
+  "short_name": "הלל\"ג של פיתי",
+  "name": "אפליקציית הלל\"ג של פיתי",
+  "description": "סורק מזון ותפריט ללא גלוטן וצליאק עבור פיתי",
   "icons": [
     {
       "src": "/icon-192.png",
