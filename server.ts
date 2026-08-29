@@ -108,7 +108,7 @@ async function startServer() {
           const offRes = await fetch(`https://world.openfoodfacts.org/api/v2/product/${queryCode}.json`, {
             signal: controller.signal,
             headers: {
-              'User-Agent': 'SIBOSafeApp/1.0 (https://sibo4nir-1.onrender.com; sibosafe@nir.app)',
+              'User-Agent': 'SIBOSafeApp/1.0 (https://piti-gf.onrender.com; sibosafe@nir.app)',
             },
           });
 
@@ -851,7 +851,7 @@ ${imageBase64 ? 'זהה מתוך התמונה את כל המצרכים הבטו�
           const offRes = await fetch(url, {
             signal: fetchController.signal,
             headers: {
-              'User-Agent': 'SiboSafeNirApp/1.0 (https://sibo4nir-1.onrender.com; hagai.hilman@gmail.com)',
+              'User-Agent': 'MasaHalalagPitiApp/1.0 (https://piti-gf.onrender.com; hagai.hilman@gmail.com)',
               Accept: 'application/json',
             },
           });
@@ -1014,7 +1014,7 @@ ${imageBase64 ? 'זהה מתוך התמונה את כל המצרכים הבטו�
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`SIBO Safe Server running on port ${PORT}`);
+    console.log(`Masa Halalag Shel Piti Server running on port ${PORT}`);
   });
 }
 
