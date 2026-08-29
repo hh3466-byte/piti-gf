@@ -15,16 +15,16 @@ export const FloatingActionButtons: React.FC<FloatingActionButtonsProps> = ({
       id="floating-sibo-actions"
       className="hidden sm:flex fixed bottom-5 left-5 z-30 flex-col gap-2.5 items-start"
     >
-      {/* אני רעבה SOS Floating Button */}
+      {/* אני רעב SOS Floating Button */}
       <button
         id="btn-floating-hunger-sos"
         type="button"
         onClick={onOpenHungerWizard}
         className="px-4 py-2.5 sm:px-5 sm:py-3 bg-teal-600/90 hover:bg-teal-700 text-white rounded-full font-black text-xs sm:text-sm flex items-center gap-2 transition-all shadow-xs hover:shadow-md active:scale-95 group cursor-pointer border border-teal-500/40"
-        title="אשף שובע מהיר — אני רעבה! מה לאכול עכשיו?"
+        title="אשף שובע מהיר — אני רעב! מה לאכול עכשיו?"
       >
         <span className="text-base sm:text-lg group-hover:scale-110 transition-transform">🥑</span>
-        <span className="tracking-wide">אני רעבה!!! ✨</span>
+        <span className="tracking-wide">אני רעב!!! ✨</span>
       </button>
 
       {/* הצעות לארוחות Floating Button - המלצת שֵׁף דַּלָּה פּוּפוּ */}

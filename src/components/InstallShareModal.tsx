@@ -12,7 +12,7 @@ export const InstallShareModal: React.FC<InstallShareModalProps> = ({ isOpen, on
   if (!isOpen) return null;
 
   const currentUrl = window.location.href;
-  const shareText = `היי, אפליקציית הלל"ג של פיתי (SIBO) - אפליקציה רפואית לבדיקת מאכלים, מתכונים ותפריטים: ${currentUrl}`;
+  const shareText = `היי, מסע הלל"ג של פיתי (SIBO) - אפליקציה רפואית לבדיקת מאכלים, מתכונים ותפריטים: ${currentUrl}`;
   const whatsappUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(shareText)}`;
 
   const handleCopy = () => {

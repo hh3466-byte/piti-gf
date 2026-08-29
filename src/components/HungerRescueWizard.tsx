@@ -65,7 +65,7 @@ interface ChefResponse {
   matchedFromInput?: string;
 }
 
-// 🏠 Massive Master Catalog of 35+ Creative ללא גלוטן-Safe Rescue Meals for Home / Kitchen
+// 🏠 Massive Master Catalog of 35+ Creative SIBO-Safe Rescue Meals for Home / Kitchen
 const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
   // --- 🍗 עופות, בשרים, שיפודים ושווארמה (Meat & Poultry) ---
   {
@@ -131,8 +131,8 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
     prepMinutes: 4,
     ingredients: ['150 גרם רצועות חזה עוף', '1 ביצה טרופה', '2 פריכיות אורז מרוסקות דק לפירורים (או 2 כפות קמח שקדים)', 'פפריקה, מלח ושמן זית לטיגון'],
     simpleSteps: ['טובלים את רצועות העוף בביצה ולאחר מכן בפירורי הפריכיות המתובלים', 'מטגנים במחבת עם שמן זית כ-2 דקות מכל צד עד להזהבה פריכה', 'מגישים חם וקראנצ\'י לצד טחינה'],
-    satietyReason: 'תחושת שניצל פריך אמיתי ב-100% התאמה ל-ללא גלוטן ללא אף גרם גלוטן.',
-    tag: 'קראנצ\'י • שניצל ללא גלוטן',
+    satietyReason: 'תחושת שניצל פריך אמיתי ב-100% התאמה ל-SIBO ללא אף גרם גלוטן.',
+    tag: 'קראנצ\'י • שניצל SIBO',
   },
   {
     id: 'm-7',
@@ -220,7 +220,7 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
   // --- 🥣 קערות שובע חמות, זודלס ותפוחי אדמה (Warm Bowls & Comfort) ---
   {
     id: 'b-1',
-    title: '🥔 "קומפיר ללא גלוטן" — תפוח אדמה לוהט במילוי שמן זית, מלח גס ופרמזן',
+    title: '🥔 "קומפיר SIBO" — תפוח אדמה לוהט במילוי שמן זית, מלח גס ופרמזן',
     category: 'bowls',
     timeToMake: '4 דקות',
     prepMinutes: 4,
@@ -249,7 +249,7 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
     ingredients: ['2 קישואים חתוכים לסרטי פסטה במקלף', '3 כפות עגבניות מרוסקות (ללא תוספות)', 'כף שמן זית מושרה שום', 'עלי בזיליקום טריים', 'פרמזן מגוררת ומלח'],
     simpleSteps: ['מקפיצים את סרטי הקישוא במחבת עם שמן שום דקה וחצי בלבד', 'מוסיפים את העגבניות המרוסקות, מלח ובזיליקום ומבשלים דקה', 'מפזרים פרמזן בנדיבות ואוכלים חם'],
     satietyReason: 'תחושת פסטה איטלקית עשירה ללא גלוטן וללא תסיסת פחמימות.',
-    tag: 'פסטה ללא גלוטן • דל פחמימה',
+    tag: 'פסטה SIBO • דל פחמימה',
   },
   {
     id: 'b-4',
@@ -284,7 +284,7 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
     ingredients: ['2 דפי אורז עגולים', '100 גרם נתחי עוף צלוי / פסטרמה', 'עלי חסה פריכים', '2 כפות טחינה גולמית', 'מלח ומיץ לימון'],
     simpleSteps: ['טובלים דף אורז בקערת מים פושרים 15 שניות ומניחים על משטח עבודה', 'מסדרים במרכז עוף, חסה וטחינה', 'מקפלים את הצדדים ומגלגלים ללאפה הדוקה'],
     satietyReason: 'מרקם לאפה מענג ורך ללא טיפת קמח חיטה, קל לעיכול ומשביע מאוד.',
-    tag: 'לאפה ללא גלוטן • ללא גלוטן',
+    tag: 'לאפה SIBO • ללא גלוטן',
   },
   {
     id: 'w-2',
@@ -323,7 +323,7 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
   // --- 🍫 מתוקים בטוחים, פודינג צ׳יה, שייקים ושוקולד (Sweet Satiety) ---
   {
     id: 'sw-1',
-    title: '🍫 "סניקרס ללא גלוטן" מהיר — פריכית עם חמאת בוטנים, שוקולד מריר 85% ומלח גס',
+    title: '🍫 "סניקרס SIBO" מהיר — פריכית עם חמאת בוטנים, שוקולד מריר 85% ומלח גס',
     category: 'sweet',
     timeToMake: '1 דקה',
     prepMinutes: 1,
@@ -331,7 +331,7 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
     ingredients: ['1-2 פריכיות אורז 100%', 'כף גדושה חמאת בוטנים 100% טבעית', '1-2 קוביות שוקולד מריר 85% מומסות (או מגוררות)', 'גרגרי מלח ים אטלנטי גס'],
     simpleSteps: ['מורחים את חמאת הבוטנים על הפריכית', 'מזלפים מעל שוקולד מריר מומס ומפזרים כמה גרגרי מלח גס', 'אוכלים מיד או מקפיאים 2 דקות לקראנץ\' מושלם'],
     satietyReason: 'שילוב מנצח של שומן צמחי, מליחות ומתיקות שסוגר לחלוטין כל חשק למתוק בלי להתסיס.',
-    tag: 'סניקרס ללא גלוטן • ממכר',
+    tag: 'סניקרס SIBO • ממכר',
   },
   {
     id: 'sw-2',
@@ -354,7 +354,7 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
     isQuickNoCook: true,
     ingredients: ['3 כפות קמח שקדים טהור', 'כף גדושה חמאת בוטנים 100%', 'כפית קקאו טהור 100%', 'כפית מייפל טהור'],
     simpleSteps: ['מערבבים את כל המצרכים בקערית לבצק אחיד', 'מגלגלים ל-3 כדורים קטנים', 'זוללים מיד כחטיף אנרגיה עשיר'],
-    satietyReason: 'חטיף אנרגיה מרוכז בשומנים בריאים ללא תמרים (עתירים בפרוקטוז!) שמתאים ב-100% ל-ללא גלוטן.',
+    satietyReason: 'חטיף אנרגיה מרוכז בשומנים בריאים ללא תמרים (עתירים בפרוקטוז!) שמתאים ב-100% ל-SIBO.',
     tag: 'כדורי אנרגיה • ללא תמרים',
   },
   {
@@ -371,7 +371,7 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
   },
   {
     id: 'sw-5',
-    title: '🥣 "דגני בוקר ללא גלוטן" — קערת חלב שקדים, פריכיות מנופצות וקינמון',
+    title: '🥣 "דגני בוקר SIBO" — קערת חלב שקדים, פריכיות מנופצות וקינמון',
     category: 'sweet',
     timeToMake: '1 דקה',
     prepMinutes: 1,
@@ -379,7 +379,7 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
     ingredients: ['2-3 פריכיות אורז מנופצות ביד לפיסות קטנות', '1 כוס חלב שקדים צונן ללא סוכר', 'כף חמאת בוטנים או חמאת שקדים', 'שפע קינמון טחון'],
     simpleSteps: ['מניחים את פיסות הפריכיות בקערה', 'יוצקים חלב שקדים קר, מזלפים חמאת בוטנים ומפזרים קינמון', 'אוכלים בכף כמו קורנפלקס קראנצ\'י'],
     satietyReason: 'מדמה קערת קורנפלקס נוסטלגית בצורה בטוחה לחלוטין ללא סוכר שולחני וללא גלוטן.',
-    tag: 'קורנפלקס ללא גלוטן • 1 דקה',
+    tag: 'קורנפלקס SIBO • 1 דקה',
   },
   {
     id: 'sw-6',
@@ -445,13 +445,13 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
   },
   {
     id: 'eg-2',
-    title: '🍳 שקשוקה ביתית בטוחה ל-ללא גלוטן מעגבניות טריות, עלי בצל ירוק ושמן שום',
+    title: '🍳 שקשוקה ביתית בטוחה ל-SIBO מעגבניות טריות, עלי בצל ירוק ושמן שום',
     category: 'eggs',
     timeToMake: '5 דקות',
     prepMinutes: 5,
     ingredients: ['2 עגבניות טריות מרוסקות', 'כף שמן זית מושרה שום', '2 כפות עלי בצל ירוק (ירוק בלבד)', 'פפריקה מתוקה, כמון ומלח', '2 ביצים טריות'],
     simpleSteps: ['מבשלים את העגבניות המרוסקות עם שמן השום והתבלינים 2 דקות', 'יוצרים גומות ושוברים פנימה 2 ביצים', 'מכסים ל-3 דקות ומגישים חם לצד פריכיות'],
-    satietyReason: 'שקשוקה חמה ומנחמת ב-100% התאמה ל-ללא גלוטן ללא שום וללא בצל.',
+    satietyReason: 'שקשוקה חמה ומנחמת ב-100% התאמה ל-SIBO ללא שום וללא בצל.',
     tag: 'שקשוקה חמה • מפנק',
   },
   {
@@ -756,7 +756,7 @@ function synthesizeMealsFromQuery(query: string): {
 
   // Detect Dangerous items mentioned
   if (/שום|אבקת שום/.test(clean)) {
-    cautions.push('⚠️ שום רגיל אסור ל-ללא גלוטן — השתמשי בשמן זית מושרה בשום (Garlic Oil) במקום!');
+    cautions.push('⚠️ שום רגיל אסור ל-SIBO — השתמשי בשמן זית מושרה בשום (Garlic Oil) במקום!');
   }
   if (/בצל|שאלוט|כרישה/.test(clean)) {
     cautions.push('⚠️ בצל מכל סוג אסור — השתמשי בחלק הירוק העליון של בצל ירוק בלבד (0 פרוקטנים).');
@@ -830,7 +830,7 @@ function synthesizeMealsFromQuery(query: string): {
 
   return {
     scenarioTitle: `המלצות שף דלה פופו עבור: "${query}" ✨`,
-    calmMessage: 'פיתי, השף התאים עבורך שפע פתרונות שובע עשירים, מגוונים ומושלמים ל-ללא גלוטן:',
+    calmMessage: 'ניר, השף התאים עבורך שפע פתרונות שובע עשירים, מגוונים ומושלמים ל-SIBO:',
     meals: finalMeals,
     safeIdentified: safeIdentified.length > 0 ? safeIdentified : ['שפע חלבונים, שומנים וירקות דלי FODMAP'],
     cautions,
@@ -883,7 +883,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
     { label: '🥔 תפו"א אפוי / קומפיר', text: 'בא לי תפוח אדמה אפוי חם ומנחם עם שמן זית וגבינה' },
     { label: '🌯 לאפה מדפי אורז', text: 'יש לי דפי אורז ואני רוצה לאפה מגולגלת' },
     { label: '🥞 פנקייק שקדים ב-3 דקות', text: 'בא לי פנקייק שקדים מתוק וטעים' },
-    { label: '🍫 סניקרס ללא גלוטן / שוקולד', text: 'בא לי חטיף סניקרס או שוקולד מריר' },
+    { label: '🍫 סניקרס SIBO / שוקולד', text: 'בא לי חטיף סניקרס או שוקולד מריר' },
     { label: '🥣 פודינג צ׳יה / שייק', text: 'בא לי פודינג צ׳יה קרמי או שייק' },
     { label: '🧀 פלטת גבינות ואגוזים', text: 'בא לי גבינות קשות מיושנות, אגוזים וזיתים' },
   ];
@@ -894,7 +894,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
       setActiveScenario('home');
       setChefResult({
         scenarioTitle: 'בופה שובע עשיר ומגוון (35+ אופציות ברשימה מתגלגלת) 🏠',
-        calmMessage: 'פיתי, הנה כל 35+ ארוחות הבזק המגוונות ברשימה מתגלגלת: בשרים, שיפודים, דגי ים, זודלס, דפי אורז, פנקייקים וקינוחי צ׳יה.',
+        calmMessage: 'ניר, הנה כל 35+ ארוחות הבזק המגוונות ברשימה מתגלגלת: בשרים, שיפודים, דגי ים, זודלס, דפי אורז, פנקייקים וקינוחי צ׳יה.',
         prepTimeMinutes: 3,
         suggestedMeals: HOME_RESCUE_MEALS,
         safeIngredientsIdentified: ['פרגית', 'בקר', 'דניס', 'לברק', 'תפו"א', 'קישוא', 'דפי אורז', 'קמח שקדים', 'שוקולד 85%', 'צ׳יה', 'פרמזן'],
@@ -1141,7 +1141,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
     if (type === 'home') {
       setChefResult({
         scenarioTitle: 'בופה שובע עשיר בבית (35+ אופציות מגוונות) 🏠',
-        calmMessage: 'פיתי, את בבית ליד המטבח! הנה שפע אדיר של ארוחות בזק מגוונות: בשרים, שיפודים, דגי ים, זודלס, דפי אורז, פנקייקים וקינוחי צ׳יה.',
+        calmMessage: 'ניר, את בבית ליד המטבח! הנה שפע אדיר של ארוחות בזק מגוונות: בשרים, שיפודים, דגי ים, זודלס, דפי אורז, פנקייקים וקינוחי צ׳יה.',
         prepTimeMinutes: 3,
         suggestedMeals: HOME_RESCUE_MEALS,
         safeIngredientsIdentified: ['פרגית', 'בקר', 'אנטרקוט', 'דניס', 'לברק', 'סלמון', 'תפוח אדמה', 'קישוא', 'דפי אורז', 'קמח שקדים', 'שוקולד 85%', 'צ׳יה', 'פרמזן', 'גאודה', 'חמאת בוטנים', 'ביצים'],
@@ -1151,7 +1151,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
     } else if (type === 'driving') {
       setChefResult({
         scenarioTitle: 'חילוץ שובע בדרכים (Yellow / תחנת דלק) 🚗',
-        calmMessage: 'פיתי, את בדרכים ואפשר להשביע את הרעב מיד! בכל חנות נוחות יש שפע פתרונות ללא גלוטן מוכנים לאכילה ברכב.',
+        calmMessage: 'ניר, את בדרכים ואפשר להשביע את הרעב מיד! בכל חנות נוחות יש שפע פתרונות SIBO מוכנים לאכילה ברכב.',
         prepTimeMinutes: 1,
         suggestedMeals: DRIVING_RESCUE_MEALS,
         safeIngredientsIdentified: ['ביצים קשות', 'טונה בשמן זית', 'סלמון מעושן', 'פריכיות אורז', 'אגוזי מלך', 'בוטנים', 'גבינה צהובה', 'מלפפון'],
@@ -1161,7 +1161,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
     } else if (type === 'restaurant') {
       setChefResult({
         scenarioTitle: 'הזמנה בטוחה במסעדה / וולט / בעבודה 🏢',
-        calmMessage: 'פיתי, אפשר ליהנות מאוכל בחוץ ובמשלוח בביטחון מלא! הנה המנות הכי בטוחות להזמנה.',
+        calmMessage: 'ניר, אפשר ליהנות מאוכל בחוץ ובמשלוח בביטחון מלא! הנה המנות הכי בטוחות להזמנה.',
         prepTimeMinutes: 10,
         suggestedMeals: RESTAURANT_ORDERING_IDEAS,
         safeIngredientsIdentified: ['פרגית על האש', 'חזה עוף', 'אורז לבן נקי', 'סשימי דג נא', 'פילה דג ים', 'תפוח אדמה אפוי', 'מלפפון'],
@@ -1171,7 +1171,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
     } else if (type === 'supermarket') {
       setChefResult({
         scenarioTitle: 'חילוץ שובע בסופרמרקט (מוכן לאכילה מהמדף) 🛒',
-        calmMessage: 'פיתי, הסופר מלא באוכל בטוח ומשביע! הנה שפע מאכלים שקונים ואוכלים מיד.',
+        calmMessage: 'ניר, הסופר מלא באוכל בטוח ומשביע! הנה שפע מאכלים שקונים ואוכלים מיד.',
         prepTimeMinutes: 1,
         suggestedMeals: SUPERMARKET_RESCUE_MEALS,
         safeIngredientsIdentified: ['עוף בגריל', 'סלמון מעושן', 'אבוקדו', 'סרדינים', 'פסטרמה', 'פריכיות אורז', 'חמאת בוטנים', 'פרמזן', 'מלפפון', 'תותים'],
@@ -1266,14 +1266,14 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
             <div>
               <div className="flex items-center gap-2 mb-0.5">
                 <span className="text-[11px] font-black tracking-wider uppercase px-2.5 py-0.5 bg-amber-400 text-stone-950 rounded-full shadow-sm">
-                  ללא גלוטן SOS
+                  SIBO SOS
                 </span>
                 <span className="text-xs font-bold text-emerald-100">
                   {isPhase1 ? 'שלב 1: קפדני' : 'שלב 2: שילוב מחדש'}
                 </span>
               </div>
               <h2 className="text-lg sm:text-2xl font-black tracking-tight text-white drop-shadow-xs">
-                אשף שובע מהיר — אני רעב 😋! ✨
+                אשף שובע מהיר — אני רעב! ✨
               </h2>
             </div>
           </div>
@@ -1294,7 +1294,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
                     דברי או הקלידי כל מה שבא לך לאכול:
                   </h3>
                   <p className="text-[11px] text-stone-600 font-medium">
-                    השף יתאים לך מיד שפע מתכוני בזק בטוחים ב-100% ל-ללא גלוטן
+                    השף יתאים לך מיד שפע מתכוני בזק בטוחים ב-100% ל-SIBO
                   </p>
                 </div>
               </div>
@@ -1555,7 +1555,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
                           איתור אוכל בטוח סביבך ב-Google Maps
                         </h4>
                         <p className="text-xs text-stone-700 font-medium">
-                          לחיצה על הכפתור תפתח ישירות מקומות קרובים עם אוכל מתאים ל-ללא גלוטן:
+                          לחיצה על הכפתור תפתח ישירות מקומות קרובים עם אוכל מתאים ל-SIBO:
                         </p>
                       </div>
                     </div>

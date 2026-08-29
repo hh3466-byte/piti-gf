@@ -276,7 +276,7 @@ export const MealSuggestionsModal: React.FC<MealSuggestionsModalProps> = ({
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-1.5">
               <ChefHat className="w-3.5 h-3.5" />
-              <span>המלצת שֵׁף דַּלָּה פּוּפוּ ל-ללא גלוטן 👨‍🍳</span>
+              <span>המלצת שֵׁף דַּלָּה פּוּפוּ ל-SIBO 👨‍🍳</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
               מתכונים וארוחות — המלצת שֵׁף דַּלָּה פּוּפוּ 🍲
@@ -577,15 +577,15 @@ export const MealSuggestionsModal: React.FC<MealSuggestionsModalProps> = ({
                 </div>
               </div>
 
-              {/* ללא גלוטן Safety Notes Banner */}
+              {/* SIBO Safety Notes Banner */}
               <div className="p-3.5 bg-emerald-50/90 rounded-2xl border border-emerald-200 flex items-start gap-2.5 text-xs sm:text-sm text-emerald-950">
                 <ShieldCheck className="w-5 h-5 text-emerald-700 shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-extrabold block">יתרונות קליניים ובטיחות ל-ללא גלוטן:</span>
+                  <span className="font-extrabold block">יתרונות קליניים ובטיחות ל-SIBO:</span>
                   <span className="text-emerald-900 font-medium">
                     {selectedRecipe.benefits && selectedRecipe.benefits.length > 0
                       ? selectedRecipe.benefits.join(' • ')
-                      : '0% שום, 0% בצל, 0% גלוטן ולקטוז — בטוח לחלוטין ל-ללא גלוטן שלב 1'}
+                      : '0% שום, 0% בצל, 0% גלוטן ולקטוז — בטוח לחלוטין ל-SIBO שלב 1'}
                   </span>
                 </div>
               </div>
@@ -595,7 +595,7 @@ export const MealSuggestionsModal: React.FC<MealSuggestionsModalProps> = ({
                 {/* Ingredients List */}
                 <div className="bg-white p-4 sm:p-5 rounded-2xl border border-stone-200 space-y-3 shadow-xs">
                   <h4 className="font-extrabold text-stone-900 text-sm flex items-center gap-1.5 border-b border-stone-100 pb-2">
-                    <span>🛒 מצרכים מדויקים ל-ללא גלוטן:</span>
+                    <span>🛒 מצרכים מדויקים ל-SIBO:</span>
                   </h4>
                   <ul className="space-y-2 text-xs sm:text-sm text-stone-700">
                     {selectedRecipe.ingredients.map((ing, i) => (
@@ -755,7 +755,7 @@ export const MealSuggestionsModal: React.FC<MealSuggestionsModalProps> = ({
         {/* Modal Footer */}
         <div className="pt-2 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500 shrink-0">
           <div className="flex items-center gap-1.5">
-            <span>🍽️ 185 מתכוני שֵׁף מדורגים ל-ללא גלוטן • מתכונים שדירגת כוכבים או סימנת ב-❤️ מופיעים תמיד בראש הרשימה!</span>
+            <span>🍽️ 185 מתכוני שֵׁף מדורגים ל-SIBO • מתכונים שדירגת כוכבים או סימנת ב-❤️ מופיעים תמיד בראש הרשימה!</span>
           </div>
           <button
             onClick={onClose}
