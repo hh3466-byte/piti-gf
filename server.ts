@@ -108,7 +108,7 @@ async function startServer() {
           const offRes = await fetch(`https://world.openfoodfacts.org/api/v2/product/${queryCode}.json`, {
             signal: controller.signal,
             headers: {
-              'User-Agent': 'SIBOSafeApp/1.0 (https://piti-gf.onrender.com; sibosafe@nir.app)',
+              'User-Agent': 'SIBOSafeApp/1.0 (https://sibo4nir-1.onrender.com; sibosafe@nir.app)',
             },
           });
 
@@ -167,7 +167,7 @@ async function startServer() {
 4. קטגוריית המוצר (categories).
 `;
 
-        const modelsToTry = ['gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
+        const modelsToTry = ['gemini-3.6-flash', 'gemini-3.5-flash-lite'];
         for (const model of modelsToTry) {
           try {
             const timeoutPromise = new Promise<never>((_, reject) =>
@@ -254,9 +254,22 @@ const systemInstruction = `
 השלב הנוכחי שנבחר עבור פיתי הוא: ${phaseDescription}.
 
 הנחיות קריטיות לראיית מחשב ו-OCR (צילום מוצרים, בקבוקים, תוויות ואריזות):
-1. חילוץ טקסט עברי מדויק (OCR): אם צולמה אריזה, בקבוק, פחית או תווית אחורית - קרא היטב את כל הכיתוב בעברית/אנגלית (לדוגמה: "מיץ תפוזים 100% סחוט טרי", "רכיבים: 100% מיץ תפוזים סחוט", "אבקת קקאו", "קצפת צמחית להקצפה", "פרי מור", "פרי ניב").
-2. זהה את המוצר והרכיבים גם אם התווית מעוקלת על בקבוק, או אם צולמה חזית האריזה (למשל בקבוק מיץ תפוזים סחוט או קופסת קקאו).
-3. נתח כל רכיב קלינית לפי חוקי ה-SIBO.
+1. חילוץ טקסט עברי מדויק (OCR): אם צולמה אריזה, בקבוק, פחית או תווית אחורית - קרא היטב את כל הכיתוב בעברית/אנגלית (לדוגמה: "אינסטנט פודינג וניל ללא סוכר", "סוויטנגו", "דפי אורז לבן", "מיץ תפוזים 100% סחוט טרי", "רכיבים: 100% מיץ תפוזים סחוט", "אבקת קקאו", "קצפת צמחית להקצפה", "קורנפלור").
+2. זהה את המוצר והרכיבים גם אם התווית מעוקלת על בקבוק, או אם צולמה חזית האריזה או גב האריזה עם רשימת הרכיבים.
+
+🌟 הנחיית זהב קריטית: בדיקת צילום תווית רכיבים וגב אריזה (Packaged Product Ingredient Analysis & Approval):
+זוהי הפונקציה החשובה ביותר באפליקציה! כאשר ניר מצלמת תווית רכיבים, שקית חטיף, או גב אריזה של מוצר (כגון תפוצ'יפס טבעי, אינסטנט פודינג סוויטנגו, דפי אורז, קורנפלור, קוואקר הרדוף, שמן זית, תבלינים, שוקולד או כל מוצר סופרמרקט אחר):
+1. קרא וחלץ את כל רשימת הרכיבים בעברית או באנגלית בדיוק מירבי (OCR).
+2. זהה את שם המוצר והמותג (למשל: "תפוצ'יפס קלאסי טבעי מלח (עלית שטראוס)", "אינסטנט פודינג וניל ללא סוכר סוויטנגו", "קורנפלור טהור גלעם", "דפי אורז לבן וילקוניק", "קוואקר עדין אורגני הרדוף").
+3. בצע בדיקה קלינית מדוקדקת של כל רכיב ורכיב לפי חוקי SIBO:
+   - אם רשימת הרכיבים נקייה מטריגרים מתסיסים (אין שום, אין בצל, אין חיטה/גלוטן, אין אינולין/עולש, אין סורביטול/מניטול/מלטיטול/קסיליטול, אין עודף פרוקטוז/דבש/סילאן, אין חלב/לקטוז, אין קטניות/סויה).
+   - רכיבים בטוחים (כגון: תפוחי אדמה, שמן צמחי, מלח, עמילן תירס/טפיוקה/תפו"א E1422, אריתריטול, סטיביה/סטיביול גליקוזיד, תמצית וניל, קמח אורז, קקאו, קוואקר/שיבולת שועל, סודה לשתייה, אבקת אפייה, תבלינים טהורים) - מותרים לחלוטין!
+4. חובת אישור המוצר (GREEN 🟢):
+   - אם כל הרכיבים שנראים בתמונה בטוחים: קבע בוודאות status: "GREEN" (אור ירוק)!
+   - אסור בתכלית לקבוע "מוצר לא מזוהה" כאשר הטקסט, שם המוצר או הרכיבים נראים בתמונה!
+   - קבע foodName: שם המוצר המדויק שנראה על האריזה.
+   - פרט ב-shortVerdict: "אור ירוק! כל רכיבי המוצר שנבדקו בצילום בטוחים ודלי תסיסה לפיתי בסיבו. 🟢"
+   - פרט ב-ingredientsBreakdown את כל הרכיבים שחולצו מהתמונה עם הסטטוס שלהם (כולם GREEN).
 
 כללי הכרעת הרמזור (Status):
 - "GREEN" (אור ירוק - מותר): המאכל דל תסיסה, 0 או כמעט 0 FODMAPs, בטוח לחלוטין לצריכה בשלב הנוכחי (למשל: עוף טרי, ביצים, דגים, מלפפון, גזר מבושל, שמן זית, שמן מושרה שום, פרמזן מיושן, עלים ירוקים של בצל ירוק, תותים בכמות מדודה, אבקת קקאו טהור, קצפת צמחית/פרווה דלת לקטוז, חלב דל לקטוז, חלב שקדים טהור).
@@ -308,13 +321,13 @@ const systemInstruction = `
       }
 
       const promptText = textPrompt
-        ? `נתח את המאכל הבא עבור פיתי עם סיבו (${isPhase1 ? 'שלב 1 קפדני' : 'שלב 2 הרחבה'}): "${textPrompt}". אם צורפה תמונה, זהה אותה ופרט את כל הרכיבים הנראים.`
-        : `זהה ונתח את המאכל/מנה שבתמונה עבור פיתי עם סיבו (${isPhase1 ? 'שלב 1 קפדני' : 'שלב 2 הרחבה'}). קבע אור ירוק, צהוב או אדום.`;
+        ? `נתח את המאכל הבא עבור פיתי עם סיבו (${isPhase1 ? 'שלב 1 קפדני' : 'שלב 2 הרחבה'}): "${textPrompt}". אם צורפה תמונה, קרא היטב את כל הטקסט, שם המוצר ורשימת הרכיבים ונתח אותם.`
+        : `קרא את כל הטקסט, שם המוצר, המותג ורשימת הרכיבים המופיעים בתמונה (OCR). זהה במדויק מהו המוצר (למשל: תפוצ'יפס טבעי מלח / עלית שטראוס, קורנפלור / עמילן תירס גלעם/סוגת, אינסטנט פודינג וניל סוויטנגו, דפי אורז לבן וילקוניק, קוואקר עדין אורגני הרדוף, שמן זית, שוקולד, תבלין, קמח או חטיף). נתח כל רכיב קלינית עבור פיתי עם סיבו (${isPhase1 ? 'שלב 1 קפדני' : 'שלב 2 הרחבה'}). אם כל הרכיבים דלי FODMAP וללא טריגרים מתסיסים (תפוחי אדמה, שמן צמחי, מלח, עמילן תירס, סטיביה, אריתריטול, מים, אורז, שיבולת שועל וכו') — קבע בוודאות אור ירוק GREEN! חלץ את שם המוצר המדויק ל-foodName ואת כל הרכיבים ל-ingredientsBreakdown.`;
 
       parts.push({ text: promptText });
 
       // Helper to generate content with model fallback
-      const modelsToTry = ['gemini-3.6-flash', 'gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
+      const modelsToTry = ['gemini-3.6-flash', 'gemini-3.5-flash-lite'];
       let response: any = null;
 
       for (const model of modelsToTry) {
@@ -502,7 +515,7 @@ ${imageBase64 ? 'זהה מתוך התמונה את כל המצרכים הבטו�
 `;
       parts.push({ text: promptText });
 
-      const modelsToTry = ['gemini-3.6-flash', 'gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
+      const modelsToTry = ['gemini-3.6-flash', 'gemini-3.5-flash-lite'];
       let response: any = null;
 
       for (const model of modelsToTry) {
@@ -851,7 +864,7 @@ ${imageBase64 ? 'זהה מתוך התמונה את כל המצרכים הבטו�
           const offRes = await fetch(url, {
             signal: fetchController.signal,
             headers: {
-              'User-Agent': 'MasaHalalagPitiApp/1.0 (https://piti-gf.onrender.com; hagai.hilman@gmail.com)',
+              'User-Agent': 'SiboSafeNirApp/1.0 (https://sibo4nir-1.onrender.com; hagai.hilman@gmail.com)',
               Accept: 'application/json',
             },
           });
@@ -944,7 +957,7 @@ ${imageBase64 ? 'זהה מתוך התמונה את כל המצרכים הבטו�
 4. אם רלוונטי, ציין טיפ פרקטי למטבח או לאכילה מחוץ לבית.
 `;
 
-      const modelsToTry = ['gemini-3.6-flash', 'gemini-2.5-flash', 'gemini-2.0-flash', 'gemini-1.5-flash'];
+      const modelsToTry = ['gemini-3.6-flash', 'gemini-3.5-flash-lite'];
       let response: any = null;
       let lastError: any = null;
 
@@ -1014,7 +1027,7 @@ ${imageBase64 ? 'זהה מתוך התמונה את כל המצרכים הבטו�
   }
 
   app.listen(PORT, '0.0.0.0', () => {
-    console.log(`Masa Halalag Shel Piti Server running on port ${PORT}`);
+    console.log(`SIBO Safe Server running on port ${PORT}`);
   });
 }
 
