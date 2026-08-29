@@ -60,7 +60,7 @@ export const SupermarketSelfScanView: React.FC<SupermarketSelfScanViewProps> = (
                 <span>לשלוח למישהו לקנות בסופר 📋</span>
               </h3>
               <p className="text-xs sm:text-sm text-stone-600 font-medium max-w-lg">
-                סמני מה חסר לך במקרר (מתוך 500+ מוצרים ומותגים בטוחים) ושלחי ישירות לוואטסאפ של הקונה!
+                סמן מה חסר לך במקרר (מתוך 500+ מוצרים ומותגים בטוחים) ושלח ישירות לוואטסאפ של הקונה!
               </p>
             </div>
             <div className="w-12 h-12 rounded-2xl bg-emerald-50 group-hover:bg-emerald-100 text-emerald-800 flex items-center justify-center text-2xl shrink-0 border border-emerald-200 shadow-2xs group-hover:scale-105 transition-transform">
@@ -75,7 +75,7 @@ export const SupermarketSelfScanView: React.FC<SupermarketSelfScanViewProps> = (
                   ✓ {selectedShoppingCount} מוצרים מסומנים ברשימה
                 </span>
               ) : (
-                <span>כל הצ׳ק-בוקסים ריקים כרגע — סמני רק מה שחסר</span>
+                <span>כל הצ׳ק-בוקסים ריקים כרגע — סמן רק מה שחסר</span>
               )}
             </div>
 

@@ -267,7 +267,7 @@ export const TrafficLightResult: React.FC<TrafficLightResultProps> = ({
                     onClick={() => onExploreAlternative('קפה שחור')}
                     className="py-3.5 px-4 bg-emerald-700 hover:bg-emerald-800 text-white font-extrabold text-xs sm:text-sm rounded-xl border border-emerald-500/40 transition-all flex items-center justify-center gap-2 cursor-pointer active:scale-95 shadow-sm"
                   >
-                    <span>☕ זה קפה שחור? לחצי כאן</span>
+                    <span>☕ זה קפה שחור? לחץ כאן</span>
                   </button>
                 </div>
               </div>

@@ -131,7 +131,7 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
     prepMinutes: 4,
     ingredients: ['150 גרם רצועות חזה עוף', '1 ביצה טרופה', '2 פריכיות אורז מרוסקות דק לפירורים (או 2 כפות קמח שקדים)', 'פפריקה, מלח ושמן זית לטיגון'],
     simpleSteps: ['טובלים את רצועות העוף בביצה ולאחר מכן בפירורי הפריכיות המתובלים', 'מטגנים במחבת עם שמן זית כ-2 דקות מכל צד עד להזהבה פריכה', 'מגישים חם וקראנצ\'י לצד טחינה'],
-    satietyReason: 'תחושת שניצל פריך אמיתי ב-100% התאמה ל-SIBO ללא אף גרם גלוטן.',
+    satietyReason: 'תחושת שניצל פריך אמיתי ב-100% התאמה לצליאק וללא גלוטן ללא אף גרם גלוטן.',
     tag: 'קראנצ\'י • שניצל SIBO',
   },
   {
@@ -293,7 +293,7 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
     timeToMake: '3 דקות',
     prepMinutes: 3,
     ingredients: ['1 דף אורז יבש', '1 ביצה טרופה', 'כף עלי בצל ירוק (ירוק בלבד)', '20 גרם פרמזן / גאודה מגוררת', 'כפית שמן שום'],
-    simpleSteps: ['מניחים דף אורז יבש ישירות במחבת חמה על אש בינונית', 'יוצקים מעליו את הביצה הטרופה עם הבצל הירוק ומורחים בעדינות', 'מפזרים גבינה, כשהדף פריך מקפלים לחצי כמו טאקו ואוכלים קראנצ\'י'],
+    simpleSteps: ['מניחים דף אורז יבש ישירות במחבת חמה על אש בינונית', 'יוצקים מעליו את הביצה הטרופה עם הבצל הירוק ומורחים בעדינות', 'מפזרים גבינה, כשהדף פריך מקפלים לחץ כמו טאקו ואוכלים קראנצ\'י'],
     satietyReason: 'חטיף קראנצ\'י גבינתי חם וממכר שמוכן תוך 180 שניות.',
     tag: 'פיצה קראנצ\'ית • להיט',
   },
@@ -354,7 +354,7 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
     isQuickNoCook: true,
     ingredients: ['3 כפות קמח שקדים טהור', 'כף גדושה חמאת בוטנים 100%', 'כפית קקאו טהור 100%', 'כפית מייפל טהור'],
     simpleSteps: ['מערבבים את כל המצרכים בקערית לבצק אחיד', 'מגלגלים ל-3 כדורים קטנים', 'זוללים מיד כחטיף אנרגיה עשיר'],
-    satietyReason: 'חטיף אנרגיה מרוכז בשומנים בריאים ללא תמרים (עתירים בפרוקטוז!) שמתאים ב-100% ל-SIBO.',
+    satietyReason: 'חטיף אנרגיה מרוכז בשומנים בריאים ללא תמרים (עתירים בפרוקטוז!) שמתאים ב-100% לצליאק וללא גלוטן.',
     tag: 'כדורי אנרגיה • ללא תמרים',
   },
   {
@@ -445,13 +445,13 @@ const HOME_RESCUE_MEALS: SuggestedRescueMeal[] = [
   },
   {
     id: 'eg-2',
-    title: '🍳 שקשוקה ביתית בטוחה ל-SIBO מעגבניות טריות, עלי בצל ירוק ושמן שום',
+    title: '🍳 שקשוקה ביתית בטוחה לצליאק וללא גלוטן מעגבניות טריות, עלי בצל ירוק ושמן שום',
     category: 'eggs',
     timeToMake: '5 דקות',
     prepMinutes: 5,
     ingredients: ['2 עגבניות טריות מרוסקות', 'כף שמן זית מושרה שום', '2 כפות עלי בצל ירוק (ירוק בלבד)', 'פפריקה מתוקה, כמון ומלח', '2 ביצים טריות'],
     simpleSteps: ['מבשלים את העגבניות המרוסקות עם שמן השום והתבלינים 2 דקות', 'יוצרים גומות ושוברים פנימה 2 ביצים', 'מכסים ל-3 דקות ומגישים חם לצד פריכיות'],
-    satietyReason: 'שקשוקה חמה ומנחמת ב-100% התאמה ל-SIBO ללא שום וללא בצל.',
+    satietyReason: 'שקשוקה חמה ומנחמת ב-100% התאמה לצליאק וללא גלוטן ללא שום וללא בצל.',
     tag: 'שקשוקה חמה • מפנק',
   },
   {
@@ -756,7 +756,7 @@ function synthesizeMealsFromQuery(query: string): {
 
   // Detect Dangerous items mentioned
   if (/שום|אבקת שום/.test(clean)) {
-    cautions.push('⚠️ שום רגיל אסור ל-SIBO — השתמשי בשמן זית מושרה בשום (Garlic Oil) במקום!');
+    cautions.push('⚠️ שום רגיל אסור לצליאק וללא גלוטן — השתמשי בשמן זית מושרה בשום (Garlic Oil) במקום!');
   }
   if (/בצל|שאלוט|כרישה/.test(clean)) {
     cautions.push('⚠️ בצל מכל סוג אסור — השתמשי בחלק הירוק העליון של בצל ירוק בלבד (0 פרוקטנים).');
@@ -830,7 +830,7 @@ function synthesizeMealsFromQuery(query: string): {
 
   return {
     scenarioTitle: `המלצות שף דלה פופו עבור: "${query}" ✨`,
-    calmMessage: 'ניר, השף התאים עבורך שפע פתרונות שובע עשירים, מגוונים ומושלמים ל-SIBO:',
+    calmMessage: 'ניר, השף התאים עבורך שפע פתרונות שובע עשירים, מגוונים ומושלמים לצליאק וללא גלוטן:',
     meals: finalMeals,
     safeIdentified: safeIdentified.length > 0 ? safeIdentified : ['שפע חלבונים, שומנים וירקות דלי FODMAP'],
     cautions,
@@ -984,7 +984,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
         if (event.error === 'not-allowed') {
           setSpeechError('יש לאשר גישה למיקרופון בהגדרות הדפדפן כדי לדבר.');
         } else if (event.error !== 'no-speech') {
-          setSpeechError('לא נקלט קול, לחצי שוב על המיקרופון ודברי.');
+          setSpeechError('לא נקלט קול, לחץ שוב על המיקרופון ודברי.');
         }
       };
 
@@ -1294,7 +1294,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
                     דברי או הקלידי כל מה שבא לך לאכול:
                   </h3>
                   <p className="text-[11px] text-stone-600 font-medium">
-                    השף יתאים לך מיד שפע מתכוני בזק בטוחים ב-100% ל-SIBO
+                    השף יתאים לך מיד שפע מתכוני בזק בטוחים ב-100% לצליאק וללא גלוטן
                   </p>
                 </div>
               </div>
@@ -1316,12 +1316,12 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
               {isListening ? (
                 <>
                   <MicOff className="w-5 h-5 animate-bounce" />
-                  <span>🔴 מקשיב לך עכשיו... דברי חופשי (לחצי לסיום)</span>
+                  <span>🔴 מקשיב לך עכשיו... דברי חופשי (לחץ לסיום)</span>
                 </>
               ) : (
                 <>
                   <Mic className="w-5 h-5 text-amber-300 animate-pulse" />
-                  <span>🎙️ לחצי כאן ודברי חופשי (למשל: &quot;בא לי שיפודי פרגית&quot; או &quot;יש לי קישוא וגבינה&quot;)</span>
+                  <span>🎙️ לחץ כאן ודברי חופשי (למשל: &quot;בא לי שיפודי פרגית&quot; או &quot;יש לי קישוא וגבינה&quot;)</span>
                 </>
               )}
             </button>
@@ -1377,7 +1377,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
                       handleExecuteUniversalQuery(customText);
                     }
                   }}
-                  placeholder="הקלידי או לחצי על המיקרופון (למשל: שיפודי פרגית, קישוא, סניקרס, שף דלה פופו)..."
+                  placeholder="הקלידי או לחץ על המיקרופון (למשל: שיפודי פרגית, קישוא, סניקרס, שף דלה פופו)..."
                   className="w-full pl-16 pr-10 py-3 bg-white border-2 border-stone-200 focus:border-emerald-500 rounded-2xl text-xs sm:text-sm font-semibold outline-none transition-all shadow-2xs"
                 />
 
@@ -1555,7 +1555,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
                           איתור אוכל בטוח סביבך ב-Google Maps
                         </h4>
                         <p className="text-xs text-stone-700 font-medium">
-                          לחיצה על הכפתור תפתח ישירות מקומות קרובים עם אוכל מתאים ל-SIBO:
+                          לחיצה על הכפתור תפתח ישירות מקומות קרובים עם אוכל מתאים לצליאק וללא גלוטן:
                         </p>
                       </div>
                     </div>
@@ -1839,7 +1839,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
                         <span>ארוחות שובע שנבחרו עבורך ({displayedMeals.length}):</span>
                       </h4>
                       <span className="text-[11px] text-stone-400 font-bold">
-                        לחצי על מצרך כדי לסמן אם יש לך
+                        לחץ על מצרך כדי לסמן אם יש לך
                       </span>
                     </div>
 
@@ -1889,7 +1889,7 @@ export const HungerRescueWizard: React.FC<HungerRescueWizardProps> = ({
 
                             {/* Interactive Ingredients */}
                             <div className="space-y-1.5">
-                              <span className="text-xs font-black text-stone-700">🛒 מה צריך (לחצי כדי לסמן):</span>
+                              <span className="text-xs font-black text-stone-700">🛒 מה צריך (לחץ כדי לסמן):</span>
                               <div className="flex flex-wrap gap-1.5">
                                 {meal.ingredients.map((ing, i) => {
                                   const isChecked = !!checkedIngredients[`${meal.id}-${i}`];

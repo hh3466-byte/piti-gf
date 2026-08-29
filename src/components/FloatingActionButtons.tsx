@@ -33,7 +33,7 @@ export const FloatingActionButtons: React.FC<FloatingActionButtonsProps> = ({
         type="button"
         onClick={onOpenMealSuggestions}
         className="px-3.5 py-2 sm:px-4 sm:py-2.5 bg-emerald-800 hover:bg-emerald-900 text-white rounded-full font-black text-xs sm:text-sm flex items-center gap-1.5 transition-all shadow-md hover:shadow-lg active:scale-95 group cursor-pointer"
-        title="המלצת שֵׁף דַּלָּה פּוּפוּ — מתכונים מותאמים ל-SIBO"
+        title="המלצת שֵׁף דַּלָּה פּוּפוּ — מתכונים מותאמים לצליאק וללא גלוטן"
       >
         <ChefHat className="w-4 h-4 text-emerald-100 group-hover:rotate-12 transition-transform" />
         <span className="tracking-wide">מתכוני שֵׁף (180+) 🍲</span>

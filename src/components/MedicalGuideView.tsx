@@ -26,7 +26,7 @@ export const MedicalGuideView: React.FC = () => {
           <span>ספרות ומחקרים רפואיים קליניים</span>
         </div>
         <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
-          עקרונות התזונה ומאמרים רפואיים ל-SIBO
+          עקרונות התזונה ומאמרים רפואיים לצליאק וללא גלוטן
         </h2>
         <p className="text-sm text-stone-600 max-w-2xl mx-auto">
           כל המידע באפליקציה מבוסס על פרוטוקולים בינלאומיים של גדולי המומחים לגסטרואנטרולוגיה: פרוטוקול

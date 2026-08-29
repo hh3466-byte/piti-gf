@@ -44,7 +44,7 @@ export const MealAnalyzer: React.FC<MealAnalyzerProps> = ({
   // 100% Safe SIBO Chef Recipes (0% Garlic, 0% Onion, 0% Gluten, 0% Fermentation)
   const safeChefRecipes = [
     {
-      title: '🍲 מוקפץ עוף אסייתי בטוח ל-SIBO',
+      title: '🍲 מוקפץ עוף אסייתי בטוח לצליאק וללא גלוטן',
       badge: '0% שום • 0% בצל • 0% גלוטן',
       text: 'חזה עוף מוקפץ בשמן זית מושרה שום (Garlic Oil), עלי בצל ירוק (ירוק בלבד), קישוא, מקלות גזר, ג׳ינג׳ר טרי ורוטב תמרי ללא גלוטן',
     },
@@ -64,7 +64,7 @@ export const MealAnalyzer: React.FC<MealAnalyzerProps> = ({
       text: 'שתי ביצי עין בשמן זית, מקלות מלפפון, תותים טריים, חלב שקדים ללא סוכר וגבינת פרמזן מיושנת (0% לקטוז)',
     },
     {
-      title: '🍳 שקשוקה ביתית בטוחה ל-SIBO',
+      title: '🍳 שקשוקה ביתית בטוחה לצליאק וללא גלוטן',
       badge: 'ללא בצל • שמן שום מושרה',
       text: 'עגבניות טריות מרוסקות, שמן זית מושרה שום (Garlic Oil), עלי בצל ירוק (ירוק בלבד), כמון, פפריקה ו-2 ביצים טריות',
     },
@@ -161,7 +161,7 @@ export const MealAnalyzer: React.FC<MealAnalyzerProps> = ({
         if (event.error === 'not-allowed') {
           setSpeechError('יש לאשר גישה למיקרופון בהגדרות הדפדפן כדי להקריא מתכון.');
         } else if (event.error !== 'no-speech') {
-          setSpeechError('לא נקלט קול, לחצי שוב על המיקרופון ודברי.');
+          setSpeechError('לא נקלט קול, לחץ שוב על המיקרופון ודברי.');
         }
       };
 
@@ -493,7 +493,7 @@ export const MealAnalyzer: React.FC<MealAnalyzerProps> = ({
               ) : (
                 <>
                   <ChefHat className="w-5 h-5" />
-                  <span>בדוק והתאם ל-SIBO 🚦</span>
+                  <span>בדוק והתאם לצליאק וללא גלוטן 🚦</span>
                 </>
               )}
             </button>

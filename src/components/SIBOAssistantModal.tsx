@@ -27,7 +27,7 @@ export const SIBOAssistantModal: React.FC<SIBOAssistantModalProps> = ({ currentP
   const [messages, setMessages] = useState<Message[]>([
     {
       role: 'assistant',
-      text: `שלום ניר ואבא! 🌿 אני יועץ התזונה הקליני המומחה ל-SIBO. 
+      text: `שלום ניר ואבא! 🌿 אני יועץ התזונה הקליני המומחה לצליאק וללא גלוטן. 
 אני כאן כדי לענות על כל שאלה בנוגע למאכלים מותרים ואסורים, טיפים להכנה, תחליפים טעימים לשום/בצל, אכילה במסעדות או מרווחי ארוחות (MMC).
 באיזה נושא אוכל לעזור לכם עכשיו?`,
       time: new Date().toLocaleTimeString('he-IL', { hour: '2-digit', minute: '2-digit' }),
@@ -123,7 +123,7 @@ export const SIBOAssistantModal: React.FC<SIBOAssistantModalProps> = ({ currentP
         if (event.error === 'not-allowed') {
           setSpeechError('יש לאשר גישה למיקרופון בהגדרות הדפדפן כדי להקריא שאלות.');
         } else if (event.error !== 'no-speech') {
-          setSpeechError('לא נקלט קול, לחצי שוב על המיקרופון ודברי.');
+          setSpeechError('לא נקלט קול, לחץ שוב על המיקרופון ודברי.');
         }
       };
 
@@ -204,7 +204,7 @@ export const SIBOAssistantModal: React.FC<SIBOAssistantModalProps> = ({ currentP
           <span>ייעוץ תזונתי קליני מבוסס בינה מלאכותית</span>
         </div>
         <h2 className="text-2xl sm:text-3xl font-black text-stone-900 tracking-tight">
-          ייעוץ תזונתי קליני ל-SIBO 💬
+          ייעוץ תזונתי קליני לצליאק וללא גלוטן 💬
         </h2>
         <p className="text-xs sm:text-sm text-stone-600 max-w-xl mx-auto leading-relaxed">
           שאלי כל שאלה בנוגע למזונות מותרים, רכיבים מוסתרים במוצרים, תחליפים למטבח והתמודדות עם סיבו — בהקלדה או בהקראה קולית ישירה.

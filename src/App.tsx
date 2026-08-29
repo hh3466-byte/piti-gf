@@ -127,7 +127,7 @@ export default function App() {
       controller.abort();
     }, 35000);
 
-    // ⚡ Instant 0ms Client-Side ללא גלוטן Analysis for Text/Barcode Queries!
+    // ⚡ Instant 0ms Client-Side SIBO Analysis for Text/Barcode Queries!
     if (payload.textPrompt) {
       const instantResult = analyzeFoodClinically(payload.textPrompt, currentPhase);
       if (payload.imageBase64) {
@@ -166,9 +166,9 @@ export default function App() {
       playFeedbackTone(result.status);
     } catch (err: any) {
       clearTimeout(timeoutId);
-      console.warn('Backend API returned error, activating ללא גלוטן Clinical Rule Engine fallback:', err);
+      console.warn('Backend API returned error, activating SIBO Clinical Rule Engine fallback:', err);
 
-      // Fail-safe ללא גלוטן Clinical Rule Engine: ALWAYS returns accurate result even if API fails!
+      // Fail-safe SIBO Clinical Rule Engine: ALWAYS returns accurate result even if API fails!
       const query = payload.textPrompt || 'מאכל שצולם במצלמה';
       const fallbackResult = analyzeFoodClinically(query, currentPhase);
       if (payload.imageBase64) {
@@ -259,38 +259,7 @@ export default function App() {
       />
 
       {/* Main App Content Container */}
-      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6 sm:py-8 space-y-6 pb-28">
-        {/* Prominent SOS Starving Banner for Nir - Styled in RAL 6019 Pastel Green */}
-        <div className="max-w-4xl mx-auto">
-          <button
-            id="banner-hunger-sos-btn"
-            type="button"
-            onClick={() => setIsHungerWizardOpen(true)}
-            className="w-full p-4 sm:p-5 rounded-3xl bg-[#BDECB6] hover:bg-[#aee4a6] text-[#064e3b] font-black text-sm sm:text-base shadow-sm hover:shadow-md transition-all flex items-center justify-between gap-3 border-2 border-[#a2dba0] active:scale-98 cursor-pointer group"
-          >
-            <div className="flex items-center gap-3.5 text-right">
-              <div className="w-12 h-12 rounded-2xl bg-white text-[#064e3b] flex items-center justify-center text-2xl shadow-2xs group-hover:scale-105 transition-transform shrink-0 border border-[#a2dba0]">
-                🥑
-              </div>
-              <div>
-                <div className="flex items-center gap-2">
-                  <span className="text-[10px] font-black uppercase tracking-wider px-2.5 py-0.5 bg-white text-[#064e3b] border border-[#a2dba0] rounded-full shadow-2xs">
-                    חירום שובע
-                  </span>
-                  <h3 className="text-base sm:text-lg font-black tracking-tight text-[#064e3b]">
-                    אני רעב 😋!!! (מה לאכול עכשיו?) ✨
-                  </h3>
-                </div>
-                <p className="text-xs text-[#0f5132] font-semibold mt-0.5">
-                  פתרונות מהירים ב-3 דקות • מקרר ומזווה • תחנות דלק • מסעדות סביבך
-                </p>
-              </div>
-            </div>
-            <div className="px-4 py-2 bg-[#064e3b] hover:bg-[#022c22] text-white font-black text-xs sm:text-sm rounded-xl shadow-xs shrink-0 transition-colors">
-              פתחי אשף ⚡
-            </div>
-          </button>
-        </div>
+      <main className="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-4 sm:py-6 space-y-4 pb-28">
 
         {/* Error Alert if any */}
         {errorMsg && (
@@ -389,7 +358,7 @@ export default function App() {
           />
         )}
 
-        {/* TAB 6: AI ללא גלוטן NUTRITION CONSULTANT */}
+        {/* TAB 6: AI SIBO NUTRITION CONSULTANT */}
         {activeTab === 'consult' && <SIBOAssistantModal currentPhase={currentPhase} />}
       </main>
 
@@ -402,7 +371,7 @@ export default function App() {
           <div className="w-8 h-8 rounded-full bg-[#BDECB6] text-[#064e3b] flex items-center justify-center text-sm shadow-sm border border-[#a2dba0]">
             🥑
           </div>
-          <span className="text-[10px]">אני רעב 😋!</span>
+          <span className="text-[10px]">אני רעב!</span>
         </button>
 
         <button
@@ -516,7 +485,7 @@ export default function App() {
             {/* Quick Action Links */}
             <div className="flex items-center gap-2 flex-wrap justify-center">
               <a
-                href="https://api.whatsapp.com/send?phone=972543200007&text=%D7%94%D7%99%D7%99%20%D7%97%D7%92%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%2F%D7%93%D7%99%D7%95%D7%95%D7%97%20%D7%A2%D7%9C%20%D7%91%D7%90%D7%92%20%D7%91%D7%A1%D7%95%D7%A8%D7%A7%20ללא גלוטן"
+                href="https://api.whatsapp.com/send?phone=972543200007&text=%D7%94%D7%99%D7%99%20%D7%97%D7%92%D7%99%2C%20%D7%99%D7%A9%20%D7%9C%D7%99%20%D7%A9%D7%90%D7%9C%D7%94%2F%D7%93%D7%99%D7%95%D7%95%D7%97%20%D7%A2%D7%9C%20%D7%91%D7%90%D7%92%20%D7%91%D7%A1%D7%95%D7%A8%D7%A7%20SIBO"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white rounded-xl font-bold text-xs flex items-center gap-1.5 transition-all shadow-xs"

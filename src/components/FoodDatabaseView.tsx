@@ -82,9 +82,9 @@ export const FoodDatabaseView: React.FC<FoodDatabaseViewProps> = ({
       recognition.onerror = (event: any) => {
         console.warn('Speech recognition error in DB search:', event.error);
         if (event.error === 'not-allowed' || event.error === 'permission-denied') {
-          setSpeechError('גישת המיקרופון חסומה. לחצי על סמל המנעול בשורת הכתובת ואשרי מיקרופון 🎤');
+          setSpeechError('גישת המיקרופון חסומה. לחץ על סמל המנעול בשורת הכתובת ואשרי מיקרופון 🎤');
         } else if (event.error === 'no-speech') {
-          setSpeechError('לא נקלט קול, לחצי שוב על המיקרופון ודברי ברור.');
+          setSpeechError('לא נקלט קול, לחץ שוב על המיקרופון ודברי ברור.');
         } else {
           setSpeechError('לא זוהה דיבור ברור, נסי שוב.');
         }
@@ -172,7 +172,7 @@ export const FoodDatabaseView: React.FC<FoodDatabaseViewProps> = ({
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h2 className="text-2xl font-bold text-stone-900 tracking-tight">
-            מאגר המאכלים ל-SIBO עבור פיתי 🥦
+            מאגר המאכלים לצליאק וללא גלוטן עבור פיתי 🥦
           </h2>
           <p className="text-sm text-stone-500">
             מדריך מהיר מבוסס מחקרי ד״ר סיבקר, ד״ר ג׳קובי ואוניברסיטת מונאש
@@ -233,7 +233,7 @@ export const FoodDatabaseView: React.FC<FoodDatabaseViewProps> = ({
                     ? 'bg-rose-500 text-white animate-pulse shadow-md'
                     : 'bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300 shadow-2xs'
                 }`}
-                title={isListening ? 'לחצי לסיום הדיבור' : 'חיפוש קולי - לחצי ודברי למיקרופון'}
+                title={isListening ? 'לחץ לסיום הדיבור' : 'חיפוש קולי - לחץ ודברי למיקרופון'}
               >
                 {isListening ? (
                   <MicOff className="w-4 h-4" />

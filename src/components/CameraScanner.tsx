@@ -910,13 +910,13 @@ export const CameraScanner: React.FC<CameraScannerProps> = ({
       recognition.onerror = (event: any) => {
         console.warn('Speech recognition error:', event.error);
         if (event.error === 'not-allowed' || event.error === 'permission-denied') {
-          setSpeechError('גישת המיקרופון חסומה. לחצי על סמל המנעול/הגדרות בשורת הכתובת בדפדפן ואשרי שימוש במיקרופון 🎤');
+          setSpeechError('גישת המיקרופון חסומה. לחץ על סמל המנעול/הגדרות בשורת הכתובת בדפדפן ואשרי שימוש במיקרופון 🎤');
         } else if (event.error === 'no-speech') {
-          setSpeechError('לא נקלט קול, לחצי שוב על המיקרופון ודברי בקול ברור.');
+          setSpeechError('לא נקלט קול, לחץ שוב על המיקרופון ודברי בקול ברור.');
         } else if (event.error === 'network') {
           setSpeechError('שגיאת רשת בשירות זיהוי הדיבור. בדקי חיבור לאינטרנט.');
         } else {
-          setSpeechError('לא זוהה דיבור, לחצי שוב על המיקרופון ודברי ברור.');
+          setSpeechError('לא זוהה דיבור, לחץ שוב על המיקרופון ודברי ברור.');
         }
         setIsListening(false);
       };
@@ -1142,7 +1142,7 @@ export const CameraScanner: React.FC<CameraScannerProps> = ({
                   <div className="bg-emerald-50 border border-emerald-200 rounded-2xl p-4 text-center space-y-1">
                     <h4 className="text-sm font-black text-emerald-950">התמונה צולמה בהצלחה!</h4>
                     <p className="text-xs text-emerald-800 font-medium">
-                      בדקי שהמאכל או האריזה נראים בבירור, ולחצי על הכפתור הירוק לבדיקת הרמזור:
+                      בדקי שהמאכל או האריזה נראים בבירור, ולחץ על הכפתור הירוק לבדיקת הרמזור:
                     </p>
                   </div>
 
@@ -1200,7 +1200,7 @@ export const CameraScanner: React.FC<CameraScannerProps> = ({
                         <span>
                           {mode === 'barcode'
                             ? '🏷️ סורק ברקודים חי: כווני את הפס האדום למרכז הברקוד לזיהוי מיידי'
-                            : '📸 המצלמה פועלת בשידור חי: כווני למוצר בנחת ולחצי על כפתור הצילום למטה'}
+                            : '📸 המצלמה פועלת בשידור חי: כווני למוצר בנחת ולחץ על כפתור הצילום למטה'}
                         </span>
                         <button
                           type="button"
@@ -1277,7 +1277,7 @@ export const CameraScanner: React.FC<CameraScannerProps> = ({
                                   className="px-6 py-3.5 bg-emerald-600 hover:bg-emerald-500 text-white rounded-2xl font-black text-sm shadow-xl flex items-center gap-2 animate-bounce"
                                 >
                                   <Play className="w-5 h-5 fill-current" />
-                                  <span>לחצי להפעלת שידור המצלמה ▶️</span>
+                                  <span>לחץ להפעלת שידור המצלמה ▶️</span>
                                 </button>
                               </div>
                             )}
@@ -1487,7 +1487,7 @@ export const CameraScanner: React.FC<CameraScannerProps> = ({
                   <Upload className="w-8 h-8" />
                 </div>
                 <h3 className="text-base font-black text-stone-900 mb-1">
-                  לחצי לבחירת תמונה מהגלריה
+                  לחץ לבחירת תמונה מהגלריה
                 </h3>
                 <p className="text-xs text-stone-500 max-w-sm mx-auto mb-4 leading-relaxed font-medium">
                   תמונה של צלחת, מוצר בסופר, תפריט במסעדה או צילום מסך
@@ -1550,7 +1550,7 @@ export const CameraScanner: React.FC<CameraScannerProps> = ({
                           ? 'bg-rose-500 text-white animate-pulse shadow-md ring-2 ring-rose-300'
                           : 'bg-amber-100 hover:bg-amber-200 text-amber-900 border border-amber-300 shadow-2xs'
                       }`}
-                      title={isListening ? 'לחצי לסיום הדיבור' : 'חיפוש קולי - לחצי ודברי למיקרופון במחשב או בטלפון'}
+                      title={isListening ? 'לחץ לסיום הדיבור' : 'חיפוש קולי - לחץ ודברי למיקרופון במחשב או בטלפון'}
                     >
                       {isListening ? (
                         <>
