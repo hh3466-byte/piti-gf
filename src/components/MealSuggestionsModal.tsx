@@ -19,6 +19,7 @@ import {
   MicOff,
   Cookie,
   Zap,
+  RefreshCw,
 } from 'lucide-react';
 import { SiboRecipe, SIBO_MEAL_SUGGESTIONS, findMatchingRecipes } from '../data/siboMealSuggestions';
 import { SiboPhase } from '../types';
@@ -91,6 +92,14 @@ export const MealSuggestionsModal: React.FC<MealSuggestionsModalProps> = ({
   const [speechError, setSpeechError] = useState<string | null>(null);
   const recognitionRef = useRef<any>(null);
 
+  // Dynamic Shuffling seed so recipes rotate dynamically
+  const [shuffleSeed, setShuffleSeed] = useState<number>(() => Math.floor(Math.random() * 100));
+
+  const handleShuffleRecipes = () => {
+    setShuffleSeed((s) => s + 1);
+    setSelectedRecipe(null);
+  };
+
   // Synchronize initial query and recipe ID when modal opens
   useEffect(() => {
     if (!isOpen) {
@@ -101,6 +110,8 @@ export const MealSuggestionsModal: React.FC<MealSuggestionsModalProps> = ({
       setSpeechError(null);
       return;
     }
+
+    setShuffleSeed((s) => s + 1); // automatically randomize recipe order on each opening
 
     if (initialRecipeId) {
       const found = SIBO_MEAL_SUGGESTIONS.find((r) => r.id === initialRecipeId);
@@ -260,12 +271,20 @@ export const MealSuggestionsModal: React.FC<MealSuggestionsModalProps> = ({
     }
 
     // Sort by Favorites (❤️) and Highest Star Ratings (⭐⭐⭐⭐⭐) to the TOP of the category!
+    // For non-favorites / unrated recipes, randomize order dynamically based on shuffleSeed so Nir always gets fresh rotation!
     return [...list].sort((a, b) => {
       const scoreA = (ratings[a.id] || 0) + (favorites[a.id] ? 10 : 0);
       const scoreB = (ratings[b.id] || 0) + (favorites[b.id] ? 10 : 0);
-      return scoreB - scoreA;
+      if (scoreA !== scoreB) return scoreB - scoreA;
+
+      if (!searchQuery.trim()) {
+        const hashA = ((a.id.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) * (shuffleSeed + 13)) % 97);
+        const hashB = ((b.id.split('').reduce((acc, c) => acc + c.charCodeAt(0), 0) * (shuffleSeed + 13)) % 97);
+        return hashA - hashB;
+      }
+      return 0;
     });
-  }, [selectedMealType, searchQuery, favorites, ratings]);
+  }, [selectedMealType, searchQuery, favorites, ratings, shuffleSeed]);
 
   if (!isOpen) return null;
 
@@ -277,13 +296,13 @@ export const MealSuggestionsModal: React.FC<MealSuggestionsModalProps> = ({
           <div>
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-100 text-emerald-800 text-xs font-bold mb-1.5">
               <ChefHat className="w-3.5 h-3.5" />
-              <span>המלצת שֵׁף דַּלָּה פּוּפוּ לצליאק וללא גלוטן 👨‍🍳</span>
+              <span>המלצת שֵׁף דַּלָּה פּוּפוּ ל-SIBO 👨‍🍳</span>
             </div>
             <h2 className="text-2xl sm:text-3xl font-extrabold text-stone-900 tracking-tight">
               מתכונים וארוחות — המלצת שֵׁף דַּלָּה פּוּפוּ 🍲
             </h2>
             <p className="text-xs sm:text-sm text-stone-500">
-              תפריטים קלים, מזינים וטעימים ללא שום, ללא בצל ו-0% תסיסה בהמלצת שֵׁף דַּלָּה פּוּפוּ — לחץ על כל ארוחה לצפייה במתכון המלא!
+              תפריטים קלים, מזינים וטעימים ללא שום, ללא בצל ו-0% תסיסה בהמלצת שֵׁף דַּלָּה פּוּפוּ — לחצי על כל ארוחה לצפייה במתכון המלא!
             </p>
           </div>
 
@@ -423,6 +442,24 @@ export const MealSuggestionsModal: React.FC<MealSuggestionsModalProps> = ({
           />
         </div>
 
+        {/* Shuffle Header & Results Count */}
+        <div className="flex items-center justify-between gap-2 px-1 shrink-0">
+          <span className="text-xs font-black text-stone-600">
+            {selectedRecipe ? 'מתכון נבחר:' : `מתכוני שף (${filteredMeals.length}):`}
+          </span>
+          {!selectedRecipe && (
+            <button
+              type="button"
+              onClick={handleShuffleRecipes}
+              className="px-3 py-1.5 bg-amber-100 hover:bg-amber-200 text-amber-950 rounded-xl font-black text-xs flex items-center gap-1.5 border border-amber-300 transition-all cursor-pointer active:scale-95 shadow-2xs"
+              title="סחרר את המתכונים והצג רעיונות חדשים ומפתיעים"
+            >
+              <RefreshCw className="w-3.5 h-3.5 text-amber-700" />
+              <span>🔀 סחרר מתכונים (עוד רעיונות)</span>
+            </button>
+          )}
+        </div>
+
         {/* Content Body: List of Meals or Open Recipe */}
         <div className="flex-1 overflow-y-auto pr-1">
           {selectedRecipe ? (
@@ -500,11 +537,11 @@ export const MealSuggestionsModal: React.FC<MealSuggestionsModalProps> = ({
               <div className="p-3.5 bg-emerald-50/90 rounded-2xl border border-emerald-200 flex items-start gap-2.5 text-xs sm:text-sm text-emerald-950">
                 <ShieldCheck className="w-5 h-5 text-emerald-700 shrink-0 mt-0.5" />
                 <div>
-                  <span className="font-extrabold block">יתרונות קליניים ובטיחות לצליאק וללא גלוטן:</span>
+                  <span className="font-extrabold block">יתרונות קליניים ובטיחות ל-SIBO:</span>
                   <span className="text-emerald-900 font-medium">
                     {selectedRecipe.benefits && selectedRecipe.benefits.length > 0
                       ? selectedRecipe.benefits.join(' • ')
-                      : '0% שום, 0% בצל, 0% גלוטן ולקטוז — בטוח לחלוטין לצליאק וללא גלוטן שלב 1'}
+                      : '0% שום, 0% בצל, 0% גלוטן ולקטוז — בטוח לחלוטין ל-SIBO שלב 1'}
                   </span>
                 </div>
               </div>
@@ -514,7 +551,7 @@ export const MealSuggestionsModal: React.FC<MealSuggestionsModalProps> = ({
                 {/* Ingredients List */}
                 <div className="bg-white p-4 sm:p-5 rounded-2xl border border-stone-200 space-y-3 shadow-xs">
                   <h4 className="font-extrabold text-stone-900 text-sm flex items-center gap-1.5 border-b border-stone-100 pb-2">
-                    <span>🛒 מצרכים מדויקים לצליאק וללא גלוטן:</span>
+                    <span>🛒 מצרכים מדויקים ל-SIBO:</span>
                   </h4>
                   <ul className="space-y-2 text-xs sm:text-sm text-stone-700">
                     {selectedRecipe.ingredients.map((ing, i) => (
@@ -555,8 +592,8 @@ export const MealSuggestionsModal: React.FC<MealSuggestionsModalProps> = ({
                   </h4>
                   <p className="text-xs text-stone-500 max-w-md mx-auto">
                     {selectedMealType === 'favorites'
-                      ? 'עדיין לא סימנת מתכונים במועדפים. לחץ על הלב ❤️ או דרגי בכוכבים ⭐ בכל מתכון כדי שהוא יופיע כאן ובראש הרשימה!'
-                      : 'נסי לחפש מילה אחרת או לחץ על אחד מכפתורי החיפוש המהיר.'}
+                      ? 'עדיין לא סימנת מתכונים במועדפים. לחצי על הלב ❤️ או דרגי בכוכבים ⭐ בכל מתכון כדי שהוא יופיע כאן ובראש הרשימה!'
+                      : 'נסי לחפש מילה אחרת או לחצי על אחד מכפתורי החיפוש המהיר.'}
                   </p>
                   <button
                     onClick={() => {
@@ -674,7 +711,7 @@ export const MealSuggestionsModal: React.FC<MealSuggestionsModalProps> = ({
         {/* Modal Footer */}
         <div className="pt-2 border-t border-stone-100 flex items-center justify-between text-xs text-stone-500 shrink-0">
           <div className="flex items-center gap-1.5">
-            <span>🍽️ 185 מתכוני שֵׁף מדורגים לצליאק וללא גלוטן • מתכונים שדירגת כוכבים או סימנת ב-❤️ מופיעים תמיד בראש הרשימה!</span>
+            <span>🍽️ 185 מתכוני שֵׁף מדורגים ל-SIBO • מתכונים שדירגת כוכבים או סימנת ב-❤️ מופיעים תמיד בראש הרשימה!</span>
           </div>
           <button
             onClick={onClose}

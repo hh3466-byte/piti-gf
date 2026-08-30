@@ -170,7 +170,7 @@ export const TrafficLightResult: React.FC<TrafficLightResultProps> = ({
     RED: {
       title: isUnidentified ? 'מוצר לא מזוהה 🔍' : 'אור אדום — אסור בתכלית לפיתי! 🔴',
       subtitle: isUnidentified
-        ? 'בדיקה משלימה לשמירה על בטיחות ניר (סריקה חוזרת או הקלדה)'
+        ? 'בדיקה משלימה לשמירה על בטיחות פיתי (סריקה חוזרת או הקלדה)'
         : 'מאכל עתיר תסיסה (FODMAP גבוה / עמילן מרוכז). מזין את חיידקי ה-SIBO!',
       color: isUnidentified ? 'text-rose-900' : 'text-rose-700',
       bgBadge: isUnidentified ? 'bg-gradient-to-r from-rose-100 to-amber-100 text-rose-950 border-amber-300' : 'bg-rose-100 text-rose-800 border-rose-300',
@@ -625,7 +625,7 @@ export const TrafficLightResult: React.FC<TrafficLightResultProps> = ({
           {(result.cookingTips || []).length > 0 && (
             <div className="pt-5 space-y-2.5">
               <h4 className="text-sm sm:text-base font-black text-stone-800 uppercase tracking-wider">
-                טיפים להכנה והקלה על העיכול של ניר:
+                טיפים להכנה והקלה על העיכול של פיתי:
               </h4>
               <ul className="space-y-2">
                 {(result.cookingTips || []).map((tip, idx) => (
